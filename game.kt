@@ -21,5 +21,5 @@ fun main(){
         else -> "is in awful condition"
     }
     //println("光環顏色: $auraColor , 是否受祝福: ${if(isBlessed) "是的" else "否"}   ")
-    //println("$name $healthStatus")
+    println("{$player.name} $healthStatus")
 }
