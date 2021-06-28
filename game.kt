@@ -8,7 +8,7 @@ fun main(){
     printPlayerStatus(player)
 
     //println("光環顏色: $auraColor , 是否受祝福: ${if(isBlessed) "是的" else "否"}   ")
-    println("${player.name} ${player.formatHealthStatus()}")
+    //println("${player.name} ${player.formatHealthStatus()}")
 }
 private fun printPlayerStatus(player:Player){
     println("Aura: ${player.auraColor()}"+
