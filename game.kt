@@ -5,6 +5,7 @@ fun main(){
     var isImmortal = false
 
     val player = Player()
+    player.castFireball()
 
     var auraVisible = healthPoint >=50 && isBlessed || isImmortal
     val karma = (Math.pow(Math.random(),(110-healthPoint)/100.0)*20).toInt()
