@@ -13,8 +13,7 @@ class Player {
         val auracolor = if (auraVisible) "Green" else "None"
         return auracolor
     }
-    fun formatHealthStatus()=
-     when(healthPoints){
+    fun formatHealthStatus() = when(healthPoints){
         100 -> "is in excellent condition!"
         in 90..99 -> "has a few scratches."
         in 75..89 -> if (isBlessed){
