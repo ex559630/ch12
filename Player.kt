@@ -4,9 +4,29 @@ class Player {
         private set(value) {
             field = value.trim()
         }
-    val healthPoint = 89
+    val healthPoints = 89
     var isBlessed = false
-    var isImmortal = false
+    private var isImmortal = false
+
+    fun auraColor(isBlessed: Boolean,
+                  healthPoints: Int,
+                isImmortal:Boolean):String{
+        var auraVisible = healthPoints >=50 && isBlessed || isImmortal
+        val aurcolor = if (auraVisible) "Green" else "None"
+        return auraColor
+    }
+    fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean)=
+     when(healthPoints){
+        100 -> "is in excellent condition!"
+        in 90..99 -> "has a few scratches."
+        in 75..89 -> if (isBlessed){
+            "has some minor wounds but is heading quite quickly."
+        }else {
+            "has some minor wounds."
+        }
+        in 15..74 -> "look pretty hurt."
+        else -> "is in awful condition"
+    }
     fun castFireball(numFireballs:Int=2){
         println("A glass of FireBall springs into existence.(x$numFireballs)")
     }
