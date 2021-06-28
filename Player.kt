@@ -1,7 +1,7 @@
 class Player {
     var name = "kiyara "
     get() = field.capitalize()
-    set(value) {
+    private set(value) {
         field = value.trim()
     }
     fun castFireball(numFireballs:Int=2){
