@@ -1,5 +1,5 @@
 fun main(){
-    val name="佐藤"
+
     val healthPoint = 89
     var isBlessed = false
     var isImmortal = false
